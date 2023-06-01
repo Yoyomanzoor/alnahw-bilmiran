@@ -1,5 +1,5 @@
 .PHONY: all
-all: pdf move
+all: clean pdf move open
 
 .PHONY: pdf
 pdf:
