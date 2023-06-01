@@ -1,0 +1,160 @@
+% https://en.wikibooks.org/wiki/LaTeX/Linguistics
+% \documentclass[a4paper,12pt]{article}
+\documentclass[12pt,twoside]{report}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage[pdfauthor={Sumeed Manzoor},pdftitle={النحو بالمران}]{hyperref}
+
+% \usepackage{geometry}
+% \newgeometry{vmargin={30mm}, hmargin={12mm,17mm}}   % set the margins
+
+\usepackage[dvipsnames]{xcolor} % for color library
+% \usepackage{tikz}
+\usepackage[linguistics]{forest}
+\usepackage{enumitem}
+\usepackage[justification=centering]{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\usepackage{polyglossia}
+\setmainlanguage{arabic}
+\setotherlanguage{english}
+
+\setmainfont[Script=Arabic]{Amiri}
+\newfontfamily\englishfont[Ligatures=TeX]{Amiri}
+
+\newfontfamily\thuluthII[
+    Path=fonts/, 
+    Script=Arabic, 
+    Extension=.ttf
+]{DecotypeThuluthII} % fancier Arabic font
+
+\newfontfamily\thuluth[
+    Path=fonts/, 
+    Script=Arabic, 
+    Extension=.ttf
+]{LotusLinotypeLight} % fancier Arabic font
+
+% \usepackage{zref-perpage}
+% \zmakeperpage{footnote}
+% \textwidthfootnoterule
+\newcommand\boldred[1]{\textcolor{Mahogany}{\textbf{#1}}} % for quick bold+red
+\newcommand\textitred[1]{\textcolor{Mahogany}{\textit{#1}}} % for quick italic+red
+% \pagestyle{headings}
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=none,
+language=english,
+autolang=other
+]{biblatex}
+\addbibresource{citations.bib}
+\usepackage{subfiles}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue
+}
+
+\titleformat{\chapter}
+{\color{Mahogany}\normalfont\huge\bfseries}
+{\color{Mahogany}\thechapter}{1em}{}
+
+\title{النحو بالمران\\لفصل العربية في جامعة ميشيغان}
+\author{\textarabic{سميد منزور}}
+\date{\today} % placeholder
+
+% \AddToHook{shipout/background}{%
+%  \put(0,-\paperheight){\tikz[overlay]\draw[line width=2pt, color=Mahogany](10pt,10pt) rectangle (\paperwidth-20pt,\paperheight-20pt);}} % makes page borders
+
+\forestset{
+  declare boolean={arb}{1},
+  arabic/.style={
+  %   where n children={0}{
+  %     tier=word,
+  %     delay={
+  %       if arb={content={##1}}{},
+  %     },
+  %   }{}
+  % },
+  % alignment/.style={
+      for tree={
+            parent anchor=south,
+            child anchor=north,
+            if n children=0{
+              font=\bfseries,
+              tier=terminal,
+              delay={
+                if arb={content={##1}}{},
+              }
+            }{},
+        }
+  },
+  written order/.style={for tree=reversed},
+}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty} % No page number on 1st page
+\tableofcontents
+
+\pagebreak
+
+\chapter{المقدمة}
+\subfile{sections/muqaddamah}
+
+\chapter{مقدمة الموضوع}
+\subfile{sections/intro}
+
+\chapter{الجمل}
+
+\subfile{sections/chapter01}
+
+\section{الجملة الفعلية}
+
+\subfile{sections/chapter01_1}
+
+\section{الجملة الاسمية}
+
+\subfile{sections/chapter01_2}
+
+\chapter{المركب غير مفيدة}
+
+\subfile{sections/chapter02}
+
+\section{المركب التوصيفي}
+
+\subfile{sections/chapter02_1}
+
+\section{المركب الإضافي}
+
+\subfile{sections/chapter02_2}
+
+\chapter{الحروف}
+
+\section{الحروف الجارة}
+
+\subfile{sections/chapter03_1}
+
+\chapter{الحروف المشبهة بالفعل والافعال الناقصة}
+
+\section{الحروف المشبهة}
+
+\subfile{sections/chapter04_1}
+
+\chapter{المثال}
+
+\subfile{sections/chapter08}
+
+\appendix
+% \section{}
+\input{sections/appendix}
+
+\printbibliography
+
+\end{document}
