@@ -1,13 +1,25 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
+\begin{figure}[H]
+\setlist{nosep, leftmargin=*, before= \vspace{-0.5\baselineskip}}
+\centering
+\begin{forest}
+    written order,
+    [الجُملَة,draw,Mahogany
+        [خَبَرِيَّة,draw,Mahogany
+            [إِسمِيَّة,draw,Mahogany]
+            [فِعلِيَّة,draw,Mahogany]
+        ]
+        [إِنشائِيَّة,draw,Mahogany]
+    ]
+\end{forest}
+\caption{}
+\label{fig:types}
+\end{figure}
+
 \begin{english}
-    \boldred{\textarabic{الجمل}}\index{jumal} are sentences. There are three types:
-	\begin{itemize}
-		\item \textarabic{الجملة الفعلية}
-		\item \textarabic{الجملة الإسمية}
-		\item \textarabic{الجملة الإنشائية}
-	\end{itemize}
+    \boldred{\textarabic{الجمل}} are sentences. There are two types, \textarabic{الجملة الخبرية} and \textarabic{الجملة الإنشائية} (\textarabic{\ref{fig:types}}). Within the \textarabic{الجملة الخبرية}, there are \textarabic{الجملة الإسمية الخبرية} and \textarabic{الجملة الفعلية الخبرية}.
 \end{english}
 
 \end{document}
