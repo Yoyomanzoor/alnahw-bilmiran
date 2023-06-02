@@ -1,6 +1,6 @@
 % https://en.wikibooks.org/wiki/LaTeX/Linguistics
 % \documentclass[a4paper,12pt]{article}
-\documentclass[12pt,twoside]{report}
+\documentclass[12pt,twoside]{book}
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
 \usepackage[pdfauthor={Sumeed Manzoor},pdftitle={النحو بالمران}]{hyperref}
 
@@ -22,7 +22,7 @@
 \setmainlanguage{arabic}
 \setotherlanguage{english}
 
-\setmainfont[Script=Arabic]{Amiri}
+\setmainfont[Script=Arabic, Mapping=arabicdigits]{Amiri}
 \newfontfamily\englishfont[Ligatures=TeX]{Amiri}
 
 \newfontfamily\thuluthII[
@@ -99,11 +99,20 @@ autolang=other
 }
 
 \begin{document}
+
+\frontmatter
+
 \maketitle
 \thispagestyle{empty} % No page number on 1st page
 \tableofcontents
 
 \pagebreak
+
+\listoffigures
+\listoftables
+
+
+\mainmatter
 
 \chapter{المقدمة}
 \subfile{sections/muqaddamah}
@@ -149,11 +158,26 @@ autolang=other
 
 \chapter{المثال}
 
-\subfile{sections/chapter08}
+\section{المثال من القرآن}
+
+\subfile{sections/chapter08_1}
+
+\section{المثال من الأحاديث}
+
+\subfile{sections/chapter08_2}
+\index{hello}
+\index{الأحاديث}
+\index{\textarabic{الأحاديث}}
 
 \appendix
-% \section{}
+
+\chapter{جدول الصرف}
+
+\subfile{sections/app-sarf}
+
 \input{sections/appendix}
+
+\backmatter
 
 \printbibliography
 
