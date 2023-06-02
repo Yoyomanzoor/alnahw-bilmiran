@@ -1,4 +1,4 @@
-DATE = $(shell date --iso=seconds)
+DATE := $(shell date --iso=seconds)
 SRC_FILES = main.tex main.pdf
 RM_FILES = $(filter-out $(SRC_FILES), $(wildcard main.*))
 
