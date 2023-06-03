@@ -1,4 +1,4 @@
-# النحو بالمران
+# النحو والمران
 
 This project is compiled on Overleaf, but can also be compiled locally.  
 I don't plan to pay for Overleaf pro, so currently updated files need to be manually copied to Overleaf.
