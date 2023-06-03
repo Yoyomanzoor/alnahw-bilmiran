@@ -4,15 +4,26 @@
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
 \usepackage[pdfauthor={Sumeed Manzoor},pdftitle={النحو بالمران}]{hyperref}
 
-% \usepackage{geometry}
-% \newgeometry{vmargin={30mm}, hmargin={12mm,17mm}}   % set the margins
+\begin{filecontents}{arabic.lbx}
+\ProvidesFile{arabic.lbx}
+\InheritBibliographyExtras{english}
+% You'll need to add more for other strings you use.
+% Look in `english.lbx` for the string name.
+\DeclareBibliographyStrings{%
+  inherit          = {english},
+  and              = {{و}{و}},
+  page             = {{صفحة}{صفحة}},
+  pages            = {{صفحات}{صفحة}},
+  references       = {{مراجع}{مراجع}},
+  seenote          = {{انظر الملاحظة}{انظر الملاحظة}},
+}
+\end{filecontents}
 
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 \usepackage[dvipsnames]{xcolor} % for color library
 \usepackage{lscape}
 \usepackage{rotating}
-% \usepackage{tikz}
 \usepackage[linguistics]{forest}
 \usepackage{enumitem}
 \usepackage[justification=centering]{caption}
@@ -20,7 +31,7 @@
 \usepackage{float}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
-% \usepackage{hyperref}
+\usepackage[autostyle]{csquotes}
 
 \usepackage{polyglossia}
 \setmainlanguage{arabic}
@@ -52,12 +63,6 @@
     Extension=.ttf
 ]{DecotypeThuluthII} % fancier Arabic font
 
-\newfontfamily\thuluth[
-    Path=fonts/, 
-    Script=Arabic, 
-    Extension=.ttf
-]{LotusLinotypeLight} % fancier Arabic font
-
 % \usepackage{zref-perpage}
 % \zmakeperpage{footnote}
 % \textwidthfootnoterule
@@ -69,9 +74,9 @@
 
 \usepackage[
 backend=biber,
-style=numeric,
-sorting=none,
-language=english,
+style=mla,
+sorting=anyt,
+language=auto,
 autolang=other
 ]{biblatex}
 \addbibresource{citations.bib}
@@ -87,23 +92,12 @@ autolang=other
 {\color{Mahogany}\thechapter}{1em}{}
 
 \title{النحو بالمران\\لفصل العربية في جامعة ميشيغان}
-% \author{\textarabic{سميد منزور}}
-% \date{\today} % placeholder
-
-% \AddToHook{shipout/background}{%
-%  \put(0,-\paperheight){\tikz[overlay]\draw[line width=2pt, color=Mahogany](10pt,10pt) rectangle (\paperwidth-20pt,\paperheight-20pt);}} % makes page borders
+\author{\textarabic{سميد منزور}}
+\date{\today} % placeholder
 
 \forestset{
   declare boolean={arb}{1},
   arabic/.style={
-  %   where n children={0}{
-  %     tier=word,
-  %     delay={
-  %       if arb={content={##1}}{},
-  %     },
-  %   }{}
-  % },
-  % alignment/.style={
       for tree={
             parent anchor=south,
             child anchor=north,
@@ -170,7 +164,7 @@ autolang=other
 	
 	\vspace{0.5\baselineskip} % Whitespace below the editor list
 	
-	\textit{\textenglish{Darussalam Seminary \\ The University of Michigan}} % Editor affiliation
+	\textit{\textenglish{Darussalam Seminary\\\vspace{3mm}The University of Michigan}} % Editor affiliation
 	
 	\vfill % Whitespace between editor names and publisher logo
 	
@@ -195,6 +189,10 @@ autolang=other
 \vspace*{\fill}
 \begin{center}
 \noindent{\thuluthII{بسم الله الرحمن الرحيم}}
+
+\vspace{10mm}
+
+\noindent{\textenglish{\textcopyright   Sumeed Manzoor all rights reserved.\\No reproduction, distribution, or derivation without explicit permission.\\Inshaallah, I will release rights once the first draft is completed.}}
 
 \vspace{10mm}
 
@@ -255,17 +253,17 @@ autolang=other
 
 \subfile{sections/chapter02_2}
 
-\chapter{الحروف}
+% \chapter{الحروف}
 
-\section{الحروف الجارة}
+% \section{الحروف الجارة}
 
-\subfile{sections/chapter03_1}
+% \subfile{sections/chapter03_1}
 
-\chapter{الحروف المشبهة بالفعل والافعال الناقصة}
+% \chapter{الحروف المشبهة بالفعل والافعال الناقصة}
 
-\section{الحروف المشبهة}
+% \section{الحروف المشبهة}
 
-\subfile{sections/chapter04_1}
+% \subfile{sections/chapter04_1}
 
 \chapter{المثال}
 
@@ -287,6 +285,8 @@ autolang=other
 
 \backmatter
 
-\printbibliography
+\printbibheading[title={\textarabic{المصادر}}]
+\printbibliography[keyword={arabic},heading=subbibliography,title={قواميس عربية}]
+\printbibliography[keyword={english},heading=subbibliography,title={\textenglish{English sources}}]
 
 \end{document}
