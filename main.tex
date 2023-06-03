@@ -8,20 +8,20 @@
 
 \usepackage[pdfauthor={Sumeed Manzoor},pdftitle={النحو بالمران}]{hyperref}
 
-\begin{filecontents}{arabic.lbx}
-\ProvidesFile{arabic.lbx}
-\InheritBibliographyExtras{english}
-% You'll need to add more for other strings you use.
-% Look in `english.lbx` for the string name.
-\DeclareBibliographyStrings{%
-  inherit          = {english},
-  and              = {{و}{و}},
-  page             = {{صفحة}{صفحة}},
-  pages            = {{صفحات}{صفحة}},
-  references       = {{مراجع}{مراجع}},
-  seenote          = {{انظر الملاحظة}{انظر الملاحظة}},
-}
-\end{filecontents}
+% \begin{filecontents}{arabic.lbx}
+% \ProvidesFile{arabic.lbx}
+% \InheritBibliographyExtras{english}
+% % You'll need to add more for other strings you use.
+% % Look in `english.lbx` for the string name.
+% \DeclareBibliographyStrings{%
+  % inherit          = {english},
+  % and              = {{و}{و}},
+  % page             = {{صفحة}{صفحة}},
+  % pages            = {{صفحات}{صفحة}},
+  % references       = {{مراجع}{مراجع}},
+  % seenote          = {{انظر الملاحظة}{انظر الملاحظة}},
+% }
+% \end{filecontents}
 
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
@@ -67,12 +67,9 @@
     Extension=.ttf
 ]{DecotypeThuluthII} % fancier Arabic font
 
-% \usepackage{zref-perpage}
-% \zmakeperpage{footnote}
-% \textwidthfootnoterule
 \newcommand\boldred[1]{\textcolor{Mahogany}{\textbf{#1}}} % for quick bold+red
 \newcommand\textitred[1]{\textcolor{Mahogany}{\textit{#1}}} % for quick italic+red
-% \pagestyle{headings}
+\newcommand\saw[0]{\textarabic{ﷺ}}
 \pagestyle{fancy}
 \renewcommand{\sectionmark}[1]{\markright{#1}}
 
@@ -223,7 +220,7 @@ autolang=other
 
 \mainmatter
 
-\chapter{المقدمة}
+\chapter*{المقدمة}
 \subfile{sections/muqaddamah}
 
 % \chapter{مقدمة الموضوع}
@@ -256,6 +253,10 @@ autolang=other
 \section{المركب الإضافي}
 
 \subfile{sections/chapter02_2}
+
+\section{المركب الإشارة}
+
+\subfile{sections/chapter02_3}
 
 % \chapter{الحروف}
 
@@ -293,6 +294,6 @@ autolang=other
 
 \printbibheading[title={\textarabic{المصادر}}]
 \printbibliography[keyword={arabic},heading=subbibliography,title={قواميس عربية}]
-\printbibliography[keyword={english},heading=subbibliography,title={\textenglish{English sources}\hfill}]
+\printbibliography[keyword={english},heading=subbibliography,title={\hfill\textenglish{English sources}}]
 
 \end{document}

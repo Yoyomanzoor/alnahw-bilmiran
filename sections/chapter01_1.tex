@@ -266,43 +266,42 @@
 \begin{figure}[H]
 \setlist{nosep, leftmargin=*, before= \vspace{-0.5\baselineskip}}
 \centering
-\begin{minipage}[t]{.5\textwidth}
-    \centering
-    \begin{forest}
-        arabic,
-        written order,
-        [جملة فعلية
-            [فعل مضارع معروف منفي باب ف\\واحد مذكر حاضر\\وفاعل (انتَ) مستتر مرفوع,name=S1
-                [a,phantom]
-                [لا تَنساني,phantom]
-            ]
-            [لا تَنساني,no edge,name=shared]
-            [مفعول به (ني) منصوب,name=S2
-                [لا تَنساني,phantom]
-                [a,phantom]
-            ]
+\begin{forest}
+    arabic,
+    written order,
+    [جملة فعلية
+        [فعل مضارع معروف منفي باب ف\\واحد مذكر حاضر\\وفاعل (انتَ) مستتر مرفوع,name=S1
+            [a,phantom]
+            [لا تَنساني,phantom]
         ]
-        \draw (S2) -- (shared);
-        \draw (S1) -- (shared);
-    \end{forest}
-    \caption{لا تَنساني \\\textenglish{Don't forget me.}}
-\end{minipage}%
-\begin{minipage}[t]{.5\textwidth}
-    \centering
-    \begin{forest}
-        arabic,
-        written order,
-        [جملة فعلية
-            [فعل ماضي معروف مثبت باب ن\\جمع مذكر حاضر\\وفاعل (انتم) مستتر مرفوع
-                [نَصَرتُم]
-            ]
-            [مفعول به منصوب
-                [رَجُلاً]
-            ]
+        [لا تَنساني,no edge,name=shared]
+        [مفعول به (ني) منصوب,name=S2
+            [لا تَنساني,phantom]
+            [a,phantom]
         ]
-    \end{forest}
-    \caption{نَصَرتم رَجُلاً \\\textenglish{You all helped a man.}}
-\end{minipage}
+    ]
+    \draw (S2) -- (shared);
+    \draw (S1) -- (shared);
+\end{forest}
+\caption{لا تَنساني \\\textenglish{Don't forget me.}}
+\end{figure}
+
+\begin{figure}[H]
+\setlist{nosep, leftmargin=*, before= \vspace{-0.5\baselineskip}}
+\centering
+\begin{forest}
+    arabic,
+    written order,
+    [جملة فعلية
+        [فعل ماضي معروف مثبت باب ن\\جمع مذكر حاضر\\وفاعل (انتم) مستتر مرفوع
+            [نَصَرتُم]
+        ]
+        [مفعول به منصوب
+            [رَجُلاً]
+        ]
+    ]
+\end{forest}
+\caption{نَصَرتم رَجُلاً \\\textenglish{You all helped a man.}}
 \end{figure}
 
 % \clearpage

@@ -1,4 +1,4 @@
 delim_0 "\\textarabic{،}  "
 delim_1 "\\textarabic{،}  "
 delim_2 "\\textarabic{،}  "
-delim_n "، "
+delim_n "\\quad"

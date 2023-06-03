@@ -1,0 +1,45 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+\begin{english}
+    \boldred{\textarabic{المُركَّب الإشارَة}}\index{مركب غير مفيدة!الإشارة} are demonstrative phrases. It consists of the \textarabic{اسم الإِشارَة} (pointer) and \textarabic{مُشار إليه} (what is being pointed to). The \textarabic{مُشار إليه} must be \textarabic{معرفة}.
+\end{english}
+
+\begin{figure}[H]
+\setlist{nosep, leftmargin=*, before= \vspace{-0.5\baselineskip}}
+\centering
+\begin{minipage}[t]{.5\textwidth}
+    \centering
+    \begin{forest}
+        arabic,
+        written order,
+        [مركب إشارة
+            [اسم إشارة
+                [هذا]
+            ]
+            [مشار إليه
+                [الكِتابُ]
+            ]
+        ]
+    \end{forest}
+    \caption{هذا الكِتابُ \\\textenglish{This book}}
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+    \centering
+    \begin{forest}
+        arabic,
+        written order,
+        [مركب إشارة
+            [اسم إشارة
+                [هذه]
+            ]
+            [مشار إليه
+                [الشَقَّةُ]
+            ]
+        ]
+    \end{forest}
+    \caption{هذه الشَقَّةُ \\\textenglish{This apartment}}
+\end{minipage}
+\end{figure}
+
+\end{document}
