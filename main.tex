@@ -2,6 +2,10 @@
 % \documentclass[a4paper,12pt]{article}
 \documentclass[11pt,twoside]{book}
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+
+\usepackage{makeidx}
+\makeindex
+
 \usepackage[pdfauthor={Sumeed Manzoor},pdftitle={النحو بالمران}]{hyperref}
 
 \begin{filecontents}{arabic.lbx}
@@ -34,7 +38,7 @@
 \usepackage[autostyle]{csquotes}
 
 \usepackage{polyglossia}
-\setmainlanguage{arabic}
+\setmainlanguage[numerals=maghrib]{arabic}
 \setotherlanguage{english}
 
 % \setmainfont[Mapping=arabicdigits, Script=Arabic]{Scheherazade New}
@@ -285,8 +289,10 @@ autolang=other
 
 \backmatter
 
+\printindex
+
 \printbibheading[title={\textarabic{المصادر}}]
 \printbibliography[keyword={arabic},heading=subbibliography,title={قواميس عربية}]
-\printbibliography[keyword={english},heading=subbibliography,title={\textenglish{English sources}}]
+\printbibliography[keyword={english},heading=subbibliography,title={\textenglish{English sources}\hfill}]
 
 \end{document}

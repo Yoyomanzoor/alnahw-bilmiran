@@ -1,5 +1,5 @@
 DATE := $(shell date --iso=seconds)
-SRC_FILES = main.tex main.pdf
+SRC_FILES = main.tex main.pdf main.mst main.ist
 RM_FILES = $(filter-out $(SRC_FILES), $(wildcard main.*))
 
 .PHONY: all
@@ -38,6 +38,7 @@ pdf:
 	xelatex main.tex
 	biber main.bcf
 	xelatex main.tex
+	makeindex main.idx
 	xelatex main.tex
 	# xindy -C utf8 -M numeric-sort -M latex -M latex-loc-fmts -M texindy -M latin-alph main.idx
 	# xindy -C utf8 -M texindy -L arabic main.idx
