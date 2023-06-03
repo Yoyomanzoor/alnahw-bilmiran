@@ -7,7 +7,11 @@
 % \usepackage{geometry}
 % \newgeometry{vmargin={30mm}, hmargin={12mm,17mm}}   % set the margins
 
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 \usepackage[dvipsnames]{xcolor} % for color library
+\usepackage{lscape}
+\usepackage{rotating}
 % \usepackage{tikz}
 \usepackage[linguistics]{forest}
 \usepackage{enumitem}
@@ -175,6 +179,8 @@ autolang=other
 	%------------------------------------------------
 	
 	% \plogo % Publisher logo
+    \includegraphics[scale=0.4]{MasjidLogo}\\
+    \includegraphics[scale=0.4]{UMLogo}
 	
 	\vspace{0.3\baselineskip} % Whitespace under the publisher logo
 	
@@ -188,7 +194,7 @@ autolang=other
 \thispagestyle{empty} % No page number on 1st page
 \vspace*{\fill}
 \begin{center}
-\noindent{\textarabic{بسم الله الرحمن الرحيم}}
+\noindent{\thuluthII{بسم الله الرحمن الرحيم}}
 
 \vspace{10mm}
 
@@ -196,8 +202,8 @@ autolang=other
 
 \vspace{10mm}
 
-\textenglish{Ann Arbor, Michigan}\\
-\textenglish{2023}
+\textenglish{Ann Arbor,}\\
+\textenglish{Michigan}
 
 \end{center}
 \vspace*{\fill}
@@ -205,6 +211,7 @@ autolang=other
 \clearpage
 
 \thispagestyle{empty}
+\setcounter{tocdepth}{1}
 \tableofcontents
 \thispagestyle{empty}
 \pagebreak
@@ -269,9 +276,6 @@ autolang=other
 \section{المثال من الأحاديث}
 
 \subfile{sections/chapter08_2}
-\index{hello}
-\index{الأحاديث}
-\index{\textarabic{الأحاديث}}
 
 \appendix
 

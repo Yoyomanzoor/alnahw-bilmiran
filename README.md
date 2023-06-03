@@ -6,7 +6,7 @@ I don't plan to pay for Overleaf pro, so currently updated files need to be manu
 ## Install XeLaTex on Ubuntu
 
 ```bash
-sudo apt-get install texlive-xetex texlive-lang-arabic texlive-bibtex-extra biber
+sudo apt-get install texlive-xetex texlive-lang-arabic texlive-bibtex-extra biber texlive-fonts-extra
 ```
 
 To compile, run `make`.

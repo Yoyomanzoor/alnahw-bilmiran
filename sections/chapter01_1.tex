@@ -271,12 +271,20 @@
         arabic,
         written order,
         [جملة فعلية
-            [فعل مضارع معروف منفي باب ف\\واحد مذكر حاضر\\وفاعل (انتَ) مستتر مرفوع
-                [لا تَنساني]
+            [فعل مضارع معروف منفي باب ف\\واحد مذكر حاضر\\وفاعل (انتَ) مستتر مرفوع,name=S1
+                [a,phantom]
+                [لا تَنساني,phantom]
+            ]
+            [لا تَنساني,no edge,name=shared]
+            [مفعول به (ني) منصوب,name=S2
+                [لا تَنساني,phantom]
+                [a,phantom]
             ]
         ]
+        \draw (S2) -- (shared);
+        \draw (S1) -- (shared);
     \end{forest}
-    \caption{لا تَضرِبينَ الكُرَةَ \\\textenglish{Don't forget me.}}
+    \caption{لا تَنساني \\\textenglish{Don't forget me.}}
 \end{minipage}%
 \begin{minipage}[t]{.5\textwidth}
     \centering

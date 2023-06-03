@@ -9,6 +9,13 @@ all:
 .PHONY: everything
 everything: clean pdf move open
 
+.PHONY: compile
+compile:
+	$(MAKE) rebuild 2>&1 | tee -a Make.log
+
+.PHONY: rebuild
+rebuild: pdf open
+
 .PHONY: pdf
 pdf:
 	@echo ""
