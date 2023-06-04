@@ -5,19 +5,6 @@
     \boldred{\textarabic{المُركَّب الإشارَة}}\index{مركب غير مفيدة!الإشارة} are demonstrative phrases. It consists of the \textarabic{اسم الإِشارَة} (pointer) and \textarabic{مُشار إليه} (what is being pointed to). The \textarabic{مُشار إليه} must be \textarabic{معرفة}. Some \textarabic{اسم الاشارة} are shown in table \textarabic{~\ref{table:ishara}}. For details of grammar rules and more \textarabic{اسماء}, see Tasheel al-Nahw \autocite{tasheel}.
 \end{english}
 
-\begin{table}[H]
-\centering
-\begin{tabular}{lcccc}
-                           & \multicolumn{2}{c}{للقريب}                                                    & \multicolumn{2}{c}{للبعيد}                                                                  \\
-                           & مذكر                                 & مؤنث                                   & مذكر                                               & مؤنث                                   \\ \cline{2-5} 
-\multicolumn{1}{l|}{واحد}  & \multicolumn{1}{c|}{هٰذا}            & \multicolumn{1}{c|}{هٰذهِ}             & \multicolumn{1}{c|}{ذٰلِكَ}                        & \multicolumn{1}{c|}{تِلكَ}             \\ \cline{2-5} 
-\multicolumn{1}{l|}{تثنية} & \multicolumn{1}{c|}{هذانِ او هذَينِ} & \multicolumn{1}{c|}{هاتانِ او هاتَينِ} & \multicolumn{1}{c|}{ذانِكَ او ذَينِكَ او ذٰلِكُما} & \multicolumn{1}{c|}{تانِكَ او تَينِكَ} \\ \cline{2-5} 
-\multicolumn{1}{l|}{جمع}   & \multicolumn{2}{c|}{هٰؤُلاءِ}                                                 & \multicolumn{2}{c|}{أُلٰئِكَ أو ذٰلِكُم}                                                    \\ \cline{2-5} 
-\end{tabular}
-\caption{جدول اسماء الاشارة}
-\label{table:ishara}
-\end{table}
-
 \begin{figure}[H]
 \setlist{nosep, leftmargin=*, before= \vspace{-0.5\baselineskip}}
 \centering
@@ -52,6 +39,57 @@
         ]
     \end{forest}
     \caption{هذه الشَقَّةُ \\\textenglish{This apartment}}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\setlist{nosep, leftmargin=*, before= \vspace{-0.5\baselineskip}}
+\centering
+\begin{minipage}[t]{.5\textwidth}
+    \centering
+    \begin{forest}
+        arabic,
+        written order,
+        [,phantom
+            [مركب إضافة
+                [مضاف
+                    [كتابـُ,name=S1]
+                ]
+                [مضاف إليه مجرور
+                    [ـكَ]
+                ]
+            ]
+            [مركب إشارة
+                [مشار إليه,name=S2
+                    [,phantom,no edge]
+                ]
+                [اسم الإشارة
+                    [هذا]
+                ]
+            ]
+        ]
+        \draw[-] (S1) to[out=north west,in=south east] (S2);
+    \end{forest}
+    \caption{كتابُكَ هذا \\\textenglish{This book of yours}}
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+    \centering
+    \begin{forest}
+        arabic,
+        written order,
+        [جملة اسمية
+            [مبتدأ مرفوع
+                [هذا]
+            ]
+            [خبر مرفوع
+                [ضمير الفصل
+                    [هو]
+                ]
+                [الكِتابُ]
+            ]
+        ]
+    \end{forest}
+    \caption{هذا هو الكِتابُ \\\textenglish{This is the book.}}
 \end{minipage}
 \end{figure}
 

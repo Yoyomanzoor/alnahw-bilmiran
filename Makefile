@@ -1,3 +1,7 @@
+# Sumeed Manzoor
+# June 2023
+# The University of Michigan Medical School
+
 DATE := $(shell date --iso=seconds)
 SRC_FILES = main.tex main.pdf main.mst main.ist
 RM_FILES = $(filter-out $(SRC_FILES), $(wildcard main.*))
@@ -56,3 +60,4 @@ open:
 clean:
 	rm -f main.pdf
 	rm -rf output
+	rm -f Make.log

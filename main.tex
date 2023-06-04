@@ -1,5 +1,8 @@
+% Sumeed Manzoor
+% Al-Nahw wal-Miran
+% The University of Michigan Medical School
+
 % https://en.wikibooks.org/wiki/LaTeX/Linguistics
-% \documentclass[a4paper,12pt]{article}
 \documentclass[11pt,twoside]{book}
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
 
@@ -25,7 +28,8 @@
 
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
-\usepackage[dvipsnames]{xcolor} % for color library
+\usepackage{multirow}
+\usepackage[table,xcdraw,dvipsnames]{xcolor}
 \usepackage{lscape}
 \usepackage{rotating}
 \usepackage[linguistics]{forest}
@@ -70,6 +74,8 @@
 \newcommand\boldred[1]{\textcolor{Mahogany}{\textbf{#1}}} % for quick bold+red
 \newcommand\textitred[1]{\textcolor{Mahogany}{\textit{#1}}} % for quick italic+red
 \newcommand\saw[0]{\textarabic{ﷺ}}
+\newcommand\jalla[0]{\textarabic{ﷻ}}
+
 \pagestyle{fancy}
 \renewcommand{\sectionmark}[1]{\markright{#1}}
 
@@ -136,7 +142,7 @@ autolang=other
 	
 	\vspace{0.75\baselineskip} % Whitespace above the title
 	
-	{\LARGE النحو بالمران\\لفصل العربية في جامعة ميشيغان\\} % Title
+	{\LARGE النحو والمران\\لفصل العربية في جامعة ميشيغان\\} % Title
 	
 	\vspace{0.75\baselineskip} % Whitespace below the title
 	
@@ -165,7 +171,7 @@ autolang=other
 	
 	\vspace{0.5\baselineskip} % Whitespace below the editor list
 	
-	\textit{\textenglish{Darussalam Seminary\\\vspace{3mm}The University of Michigan}} % Editor affiliation
+	\textit{\textenglish{Darussalam Seminary\\\vspace{3mm}The University of Michigan\\Medical School}} % Editor affiliation
 	
 	\vfill % Whitespace between editor names and publisher logo
 	
@@ -193,16 +199,16 @@ autolang=other
 
 \vspace{10mm}
 
-\noindent{\textenglish{\textcopyright   Sumeed Manzoor all rights reserved.\\No reproduction, distribution, or derivation without explicit permission.\\Inshaallah, I will release rights once the first draft is completed.}}
+\noindent{\textenglish{\textcopyright Sumeed Manzoor all rights reserved.\\No reproduction, distribution, or derivation without explicit permission.\\Inshaallah, I will release these rights once the first draft is completed.}}
 
 \vspace{10mm}
 
 \itshape{\noindent{\textenglish{Please keep me, my parents, family, and teachers in your duas.}}}
 
-\vspace{10mm}
+% \vspace{10mm}
 
-\textenglish{Ann Arbor,}\\
-\textenglish{Michigan}
+% \textenglish{Ann Arbor,}\\
+% \textenglish{Michigan}
 
 \end{center}
 \vspace*{\fill}
@@ -226,67 +232,79 @@ autolang=other
 % \chapter{مقدمة الموضوع}
 \subfile{sections/intro}
 
-\chapter{الجمل}
 
+\chapter{الجمل}
 \subfile{sections/chapter01}
 
 \section{الجملة الفعلية}
-
 \subfile{sections/chapter01_1}
 
 \section{الجملة الاسمية}
-
 \subfile{sections/chapter01_2}
 
 \section{الجملة الإنشائية}
-
 \subfile{sections/chapter01_3}
 
-\chapter{المركب غير مفيدة}
 
+\chapter{المركب غير مفيدة}
 \subfile{sections/chapter02}
 
 \section{المركب التوصيفي}
-
 \subfile{sections/chapter02_1}
 
 \section{المركب الإضافي}
-
 \subfile{sections/chapter02_2}
 
 \section{المركب الإشارة}
-
 \subfile{sections/chapter02_3}
 
-% \chapter{الحروف}
+\section{المركب العددي}
+\subfile{sections/chapter02_4}
 
-% \section{الحروف الجارة}
+\section{المركب منع الصرف}
+\subfile{sections/chapter02_5}
 
-% \subfile{sections/chapter03_1}
 
-% \chapter{الحروف المشبهة بالفعل والافعال الناقصة}
+\chapter{المبني}
 
-% \section{الحروف المشبهة}
+\section{الحروف الجارة}
+\subfile{sections/chapter03_1}
 
-% \subfile{sections/chapter04_1}
+\section{الحروف العاطفة}
+\subfile{sections/chapter03_2}
+
+\section{الحروف المشبهة بالفعل}
+\subfile{sections/chapter03_3}
+
+\section{الأفعال الناقصة}
+
+\section{الضمائر}
+\subfile{sections/chapter_dameer}
+
+
+\chapter{المعرب}
+
 
 \chapter{المثال}
 
 \section{المثال من القرآن}
-
 \subfile{sections/chapter08_1}
 
 \section{المثال من الأحاديث}
-
 \subfile{sections/chapter08_2}
+
 
 \appendix
 
-\chapter{جدول الصرف}
 
+\chapter{جداول متفرقة}
+\subfile{sections/app-tables}
+
+
+\chapter{جدول الصرف}
 \subfile{sections/app-sarf}
 
-\input{sections/appendix}
+% \input{sections/appendix}
 
 \backmatter
 
