@@ -5,6 +5,8 @@
 DATE := $(shell date --iso=seconds)
 SRC_FILES = main.tex main.pdf main.mst main.ist
 RM_FILES = $(filter-out $(SRC_FILES), $(wildcard main.*))
+RAW_SRC_FILES = $(wildcard sections/*.tex)
+RM_SECTION_FILES = $(filter-out $(RAW_SRC_FILES), $(wildcard sections/*))
 
 .PHONY: all
 all:
@@ -51,6 +53,7 @@ pdf:
 move:
 	mkdir -p output
 	mv $(RM_FILES) output
+	mv $(RM_SECTION_FILES) output
 
 .PHONY: open
 open:
