@@ -27,6 +27,7 @@
 \usepackage{titlesec}
 \usepackage[autostyle]{csquotes}
 \usepackage{paracol}
+\footnotelayout{m}
 
 \usepackage{polyglossia}
 \setmainlanguage[numerals=maghrib]{arabic}
@@ -206,11 +207,24 @@ autolang=other
 \tableofcontents
 \thispagestyle{empty}
 \pagebreak
-\thispagestyle{empty}
-\listoffigures
-\listoftables
+% \thispagestyle{empty}
+% \listoffigures
+% \listoftables
 
 \mainmatter
+
+\columnratio{0.7}
+\colseprulecolor{Mahogany}
+% \setlength{\columnseprule}{1pt}
+\setlength{\columnsep}{2em}
+
+\begin{paracol}{2}
+\begin{english}
+  I have summarized these simplified notes from \textarabic{قواعد الإعراب} to be easy for the students, near to those of intellect, and composed of three chapters.
+\end{english}
+\switchcolumn
+هذه نُكْتة يسيرة اختصرتها من (قواعد الإعراب)، تسهيلًا على الطُّلّاب، وتقريبًا على أُولي الألباب، وتَنْحصِر في ثلاثةِ أبوابٍ
+\end{paracol}
 
 \chapter{الباب الأول في الجملة\hfill\textenglish{The sentence}}
 \subfile{sections/babaljumal.tex}

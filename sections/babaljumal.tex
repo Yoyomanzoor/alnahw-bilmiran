@@ -1,11 +1,6 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
-\columnratio{0.7}
-\colseprulecolor{Mahogany}
-% \setlength{\columnseprule}{1pt}
-\setlength{\columnsep}{2em}
-
 \begin{paracol}{2}
 
 \begin{english}
@@ -13,15 +8,14 @@
 
     \textbf{The first point} is that useful utterances are termed \textbf{words} (\textarabic{كَلام}) and \textbf{sentences} (\textarabic{جُملَة}).
 
-    The sentence is termed\footnotemark
+    The sentence is termed\footnote{There are multiple ways a sentence can be characterized.}
     \begin{itemize}
-        \item \textbf{nominal} (\textarabic{اِسمِيّة}) if it begins with a noun, for example ''Zaid is standing'' \textarabic{زيدٌ قائمٌ}.\footnotemark
-        \item \textbf{verbal} (\textarabic{فِعلِيّة}) if it begins with a verb, for example ''Zaid is standing'' \textarabic{قام زيدٌ}.\footnotemark
-        \item \textbf{minor} (\textarabic{صُغرى}) if it is 
-        \item \textbf{major} (\textarabic{كُرى}) if it 
+        \item \textbf{nominal} (\textarabic{اِسمِيّة}) if it begins with a noun, for example \textarabic{زيدٌ قائمٌ} ``Zaid is standing''.\footnote{In Arabic, there is not a concept of the word 'is'.}
+        \item \textbf{verbal} (\textarabic{فِعلِيّة}) if it begins with a verb, for example \textarabic{قامَ زيدٌ} ``Zaid is standing''.\footnote{While the translation to English is the same, the Arabic structure is different between these examples. In the first example, the noun came first. In this example, the verb came first.}
+        \item \textbf{minor} (\textarabic{صُغرى}) if it is a part of a bigger sentence, such as \textarabic{قامَ أبوه} ``His father is standing'', from your saying \textarabic{زيدٌ قامَ أبوه} ``Zaid's father is standing.''
+        \item \textbf{major} (\textarabic{كُبرى})\footnote{All \textarabic{جملة كبرى} are \textarabic{جملة اسمية}. \textarabic{جملة صغرى} can be \textarabic{اسمية} or \textarabic{فعلية}.} if there is a sentence contained in it, such as the compound [sentence] \textarabic{زيدٌ قامَ أبوه} ``Zaid's father is standing.''
     \end{itemize}
     
-
 \end{english}
 
 \switchcolumn
@@ -31,10 +25,67 @@
 
 \end{paracol}
 
+\begin{figure}[H]
+    \setlist{nosep, leftmargin=*, before= \vspace{-0.5\baselineskip}}
+    \centering
+    \begin{forest}
+        arabic,
+        written order,
+        [جملة كبرى
+            [مبتدأ مرفوع
+                [زيدٌ]
+            ]
+            [خبر مرفوع
+                [جملة صُغرى فعلية خبرية
+                    [فعل ماض
+                        [قامَ]
+                    ]
+                    [فاعل مرفوع
+                        [أبوه\footnotemark]
+                    ]
+                ]
+            ]
+        ]
+    \end{forest}
+    \caption{زيدٌ قامَ أبوه \\\textenglish{Zaid .}}
+\end{figure}
+
 \begin{english}
-\footnotetext{This discussion is based on }
-\footnotetext{In Arabic, there is not a concept of the word 'is'.}
-\footnotetext{While the translation to English is the same, the Arabic structure is different between these examples. In the first example, the noun came first. In this example, the verb came first.}
+    \footnotetext{This structure is called \textarabic{إضافة}. See Nizam al-Nahw \textarabic{\autocite{nizam}} for details.}
 \end{english}
+
+\begin{paracol}{2}
+
+\begin{english}
+    \textbf{The second point} regarding sentences are those that have \textit{i'raab}, and there are seven:
+\end{english}
+
+\switchcolumn
+المسألة الثانية في الجمل التي لها محل من الإعراب، وهي سبع:
+
+\switchcolumn
+
+\begin{english}
+    some text here
+\end{english}
+
+\switchcolumn*
+
+\begin{itemize}
+    \item إحداها الواقعة خبرًا، وموضعها رَفْعٌ في بابَيْ المبتدإ و(إنَّ)، نحو: (زيدٌ قامَ أبوه)، و(إنّ زيدًا أبوه قائمٌ)، ونَصْبٌ في بابيْ (كان) و(كاد)، نحو: (كانَ زيدٌ أبوه قائمٌ)، (وكادَ زيدٌ يفعلُ).
+    \item الثانية والثالثة: الواقعة حالًا، والواقعة مفعولًا، ومحلُّهما النصبُ، نحو: (رأيتُ زيدًا يضحكُ).
+    والمفعوليّة تَقَعُ في أربعةِ مواضعَ:
+    \begin{itemize}
+        \item مَحْكِيّة بالقول، نحو: ﴿قَالَ إِنِّي عَبْدُ اللَّهِ﴾، و(قالَ زيدٌ: ’عمرٌو منطلق‘)،
+        \item وتاليةً للمفعولِ الأوّلِ في باب (ظنَّ)، نحو: (ظننتُ زيدًا يقرأُ)،
+        \item وتاليةً للمفعولِ الثاني في باب (أَعْلَمَ)، نحو: (أعلمتُ زيدًا عمرًا أبوه قائمٌ)،
+        \item ومعلقًا عنها العامل، نحو: ﴿لِنَعْلَمَ أَيُّ الْحِزْبَيْنِ أَحْصَىٰ﴾، ﴿فَلْيَنظُرْ أَيُّهَا أَزْكَىٰ طَعَامًا﴾.
+        \item والرابعة المضاف إليها، ومحلها الجر، نحو: ﴿يَوْمَ هُم بَارِزُونَ﴾، ﴿يَوْمُ يَنفَعُ الصَّادِقِينَ صِدْقُهُمْ﴾.
+    \end{itemize}
+    \item والخامسة: الواقعة جوابا لشرط جازم، إذا كانت مقرونة بالفاء، أو بـ(إذا) الفجائية، نحو: ﴿مَن يُضْلِلِ اللَّهُ فَلَا هَادِيَ لَهُ﴾، ونحو: ﴿وَإِن تُصِبْهُمْ سَيِّئَةٌ بِمَا قَدَّمَتْ أَيْدِيهِمْ إِذَا هُمْ يَقْنَطُونَ﴾.
+    \item السادسة والسابعة: التابعةُ لِمُفردٍ أو لجملةٍ لها محلٌّ مِنَ الإعراب، فالأُولى نحو: ﴿مِّن قَبْلِ أَن يَأْتِيَ يَوْمٌ لَّا بَيْعٌ فِيهِ﴾، فجملة النفي صفة لـ(يوم)، والثانية نحو: (زيدٌ قامَ أبوه وقعَدَ أخوه).
+\end{itemize}
+
+\end{paracol}
 
 \end{document}
