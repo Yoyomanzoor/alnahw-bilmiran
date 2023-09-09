@@ -1,4 +1,61 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 
+\begin{english}
+    \boldred{\textarabic{الحروف العاطفة}}\index{الحروف العاطفة} are conjunctive prepositions. See table \textarabic{\ref{table:aatifah}} for a list of the \textarabic{حروف عاطفة}.
+\end{english}
+
+\begin{figure}[H]
+    \setlist{nosep, leftmargin=*, before= \vspace{-0.5\baselineskip}}
+    \centering
+    \begin{minipage}[t]{.5\textwidth}
+        \centering
+        \begin{forest}
+            arabic,
+            written order,
+            [جملة فعلية
+                [فعل ماض معروف مثبت\\واحد مذكر غائب\\وفاعل (هو) مستتر مرفوع
+                    [باعَ]
+                ]
+                [مفعول به منصوب
+                    [معطوف عليه
+                        [قَميساً]
+                    ]
+                    [حرف عطف
+                        [و]
+                    ]
+                    [معطوف عليه
+                        [إزاراً]
+                    ]
+                ]
+            ]
+        \end{forest}
+        \caption{باعَ قَميساً وَإزاراً \\\textenglish{He sold a shirt and an \textit{izar}.}}
+    \end{minipage}%
+    \begin{minipage}[t]{.5\textwidth}
+        \centering
+        \begin{forest}
+            arabic,
+            written order,
+            [
+                [فعل ماض معروف مثبت\\واحد متكلم\\وفاعل (ـتُ) مرفوع
+                    [رَأيتُ]
+                ]
+                [مفعول به منصوب
+                    [معطوف عليه
+                        [إوَزاً]
+                    ]
+                    [حرف عطف
+                        [أو]
+                    ]
+                    [معطوف
+                        [بَطًّا]
+                    ]
+                ]
+            ]
+        \end{forest}
+        \caption{رَأيتُ إوَزاً أو بَطًّا \\\textenglish{I saw a goose or a duck.}}
+    \end{minipage}
+\end{figure}
+
 \end{document}

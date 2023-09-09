@@ -94,4 +94,57 @@
 \end{minipage}
 \end{figure}
 
+\begin{figure}[H]
+\setlist{nosep, leftmargin=*, before= \vspace{-0.5\baselineskip}}
+\centering
+\begin{minipage}[t]{.5\textwidth}
+    \centering
+    \begin{forest}
+        arabic,
+        written order,
+        [مركب إضافي
+            [مضاف
+                [كِتابُ]
+            ]
+            [مضاف إليه مجرور\\(مركب توصيفي)
+                [موصوف
+                    [المَكتَبةِ]
+                ]
+                [صفة
+                    [القَديمةِ]
+                ]
+            ]
+        ]
+    \end{forest}
+    \caption{كِتابُ المَكتَبةِ القَديمةِ \\\textenglish{The book of the old library.}}
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+    \centering
+    \begin{forest}
+        arabic,
+        written order,
+        [,phantom
+            [مركب إضافة
+                [مضاف
+                    [كِتابُ,name=S1]
+                ]
+                [مضاف إليه مجرور
+                    [المَكتَبةِ]
+                ]
+            ]
+            [مركب توصيفي
+                [موصوف,name=S2
+                    [,phantom,no edge]
+                ]
+                [صفة
+                    [القَديمُ]
+                ]
+            ]
+        ]
+        \draw[-] (S1) to[out=north west,in=south east] (S2);
+    \end{forest}
+    \caption{كِتابُ المَكتَبةِ القَديمُ \\\textenglish{The old book of the library.}}
+\end{minipage}
+\end{figure}
+
 \end{document}

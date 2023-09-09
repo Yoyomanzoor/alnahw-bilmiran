@@ -53,7 +53,7 @@ pdf:
 move:
 	mkdir -p output
 	mv $(RM_FILES) output
-	mv $(RM_SECTION_FILES) output
+	# mv $(RM_SECTION_FILES) output
 
 .PHONY: open
 open:
