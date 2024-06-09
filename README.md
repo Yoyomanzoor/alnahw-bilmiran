@@ -2,10 +2,18 @@
 
 This project is a heavy work in progress. Please do not copy any material from the text until it is complete.
 
-## Install XeLaTex on Ubuntu
+## Install XeLaTex 
+
+### Ubuntu
 
 ```bash
 sudo apt-get install texlive-xetex texlive-lang-arabic texlive-bibtex-extra biber texlive-fonts-extra
+```
+
+### Arch
+
+```bash
+sudo pacman -S texlive-xetex texlive-langarabic texlive-bibtexextra biber texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra
 ```
 
 ## Compile
