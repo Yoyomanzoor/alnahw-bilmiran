@@ -16,6 +16,14 @@ sudo apt-get install texlive-xetex texlive-lang-arabic texlive-bibtex-extra bibe
 sudo pacman -S texlive-xetex texlive-langarabic texlive-bibtexextra biber texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra
 ```
 
+### Nix
+
+```bash
+nix flake init --template "https://flakehub.com/f/Yoyomanzoor/flake-templates/*#latex"
+git add .
+direnv allow
+```
+
 ## Compile
 
 To compile, run `make`.
